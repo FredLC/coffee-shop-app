@@ -1,35 +1,53 @@
 # Coffee Shop Full Stack
 
-## Full Stack Nano - IAM Final Project
+Udacity has decided to open a new digitally enabled cafe for students to order drinks, socialize, and study hard. The coffee shop app enables baristas to see recipes information and managers to create and update drinks.
 
-Udacity has decided to open a new digitally enabled cafe for students to order drinks, socialize, and study hard. But they need help setting up their menu experience.
+## Application Stack
 
-You have been called on to demonstrate your newly learned skills to create a full stack drink menu application. The application must:
+Flask, SQLite and SQLAlchemy backend with Ionic frontend. Auth0 is used for authentication and authorization.
 
-1. Display graphics representing the ratios of ingredients in each drink.
-2. Allow public users to view drink names and graphics.
-3. Allow the shop baristas to see the recipe information.
-4. Allow the shop managers to create new drinks and edit existing drinks.
-
-## Tasks
-
-There are `@TODO` comments throughout the project. We recommend tackling the sections in order. Start by reading the READMEs in:
-
-1. [`./backend/`](./backend/README.md)
-2. [`./frontend/`](./frontend/README.md)
-
-## About the Stack
-
-We started the full stack application for you. It is designed with some key functional areas:
+## Get Started
 
 ### Backend
 
-The `./backend` directory contains a partially completed Flask server with a pre-written SQLAlchemy module to simplify your data needs. You will need to complete the required endpoints, configure, and integrate Auth0 for authentication.
+Configure a virtual environment. Follow this [link](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) for instructions.
 
-[View the README.md within ./backend for more details.](./backend/README.md)
+From the `/backend` directory:
+
+#### Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+From the `/backend/src` directory:
+
+#### Run server
+
+```
+export FLASK_APP=api.py;
+```
+
+```
+flask run --reload
+```
 
 ### Frontend
 
-The `./frontend` directory contains a complete Ionic frontend to consume the data from the Flask server. You will only need to update the environment variables found within (./frontend/src/environment/environment.ts) to reflect the Auth0 configuration details set up for the backend app.
+From the `/frontend` directory:
 
-[View the README.md within ./frontend for more details.](./frontend/README.md)
+```
+npm install
+```
+
+#### Run Ionic server
+
+If you don't have the Ionic CLI installed on your machine run:
+
+```
+npm install -g @ionic/cli
+```
+
+```
+ionic serve
+```
